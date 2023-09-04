@@ -9,11 +9,6 @@ const {
 const router = require("express").Router();
 
 router.post("/login", login);
-router.post("/test", (req, res) => {
-  res.status(200).json({
-    status: Completed,
-  });
-});
 router.post("/register", register);
 router.get("/allusers/:id", getAllUsers);
 router.post("/setavatar/:id", setAvatar);
