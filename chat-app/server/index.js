@@ -22,6 +22,11 @@ mongoose
     console.log(err.message);
   });
 
+app.use("/api/test", (req, res) => {
+  res.status(200).json({
+    status: Completed,
+  });
+});
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
