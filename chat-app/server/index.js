@@ -6,6 +6,9 @@ const messageRoutes = require("./routes/messages");
 const app = express();
 const morgan = require("morgan");
 const socket = require("socket.io");
+
+app.use(helmet());
+app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 require("dotenv").config();
 
 app.use(cors());
